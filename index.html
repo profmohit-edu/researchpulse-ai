@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ResearchPulse-AI | Scholarly Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><div><small>BVCOE · CSE · RESEARCH IMPACT PROTOTYPE</small><h1>ResearchPulse-AI</h1><p>AI-Driven Scholarly Intelligence and Research Impact Monitoring Prototype</p></div><div class="owner"><strong>Mohit Tiwari</strong><span>Department of Computer Science and Engineering</span><span>Bharati Vidyapeeth's College of Engineering, New Delhi</span></div></header>
+  <main>
+    <section class="hero"><div><small>LIVE OPENALEX INTELLIGENCE</small><h2>Evidence first. Interpretation second.</h2><p>Resolve a scholar, retrieve current bibliographic records, calculate longitudinal indicators, and run a bounded explainable trajectory model.</p></div><div class="flow"><b>1 Author</b><i>→</i><b>2 Publications</b><i>→</i><b>3 Monitoring</b><i>→</i><b>4 AI</b></div></section>
+    <section class="search-card"><label for="query">Scholar or author name</label><div class="search-row"><input id="query" value="Yann LeCun" placeholder="e.g., Yann LeCun"><button id="search">Search OpenAlex</button></div><p class="help">General prototype: search results must be selected before analysis. No profile is hard-coded.</p><div id="author-results" class="author-results"></div></section>
+    <div id="status" class="status">Ready for a live OpenAlex query.</div>
+    <div id="dashboard" hidden>
+      <section class="identity"><div><small>RESOLVED SCHOLAR</small><h2 id="author-name"></h2><p id="author-meta"></p></div><a id="source-link" target="_blank" rel="noreferrer">View OpenAlex record ↗</a></section>
+      <section><div class="section-title"><div><small>SOURCE DATA / DETERMINISTIC METRICS</small><h2>Retrieved bibliometrics</h2></div><span class="source">OpenAlex · CC0 · live retrieval</span></div><div id="metrics" class="metrics"></div></section>
+      <section class="monitor"><div class="section-title"><div><small>LONGITUDINAL MONITORING</small><h2>Publication and citation trajectory</h2></div><span id="retrieved-at"></span></div><div id="chart" class="chart"></div><div id="window" class="window"></div></section>
+      <section><div class="section-title"><div><small>RETRIEVED PUBLICATIONS</small><h2>Recent scholarly output</h2></div><span id="sample-note"></span></div><div id="publications" class="publications"></div></section>
+      <section class="ai"><div class="section-title"><div><small>BOUNDED AI INTERPRETATION</small><h2>Evidence-grounded trajectory model</h2></div><span class="model">trajectory-logit-v1.0</span></div><div class="ai-grid"><div><small>MODEL CLASS</small><h3 id="ai-label"></h3><div id="ai-prob"></div><p id="ai-text"></p></div><div><h3>Evidence used</h3><div id="features"></div><p class="scope">The model cannot add publications, change citation counts, resolve identity, or judge research quality.</p></div></div></section>
+      <section class="provenance"><div><span>Data source</span><strong>OpenAlex API</strong></div><div><span>Calculation</span><strong>Current-year excluded windows</strong></div><div><span>Boundary</span><strong>Source records unchanged ✓</strong></div></section>
+    </div>
+  </main>
+  <footer>ResearchPulse-AI · Metrics require identity verification · AI output requires human interpretation</footer>
+  <script src="app.js"></script>
+</body>
+</html>
